@@ -1,0 +1,12 @@
+#!/bin/bash
+sudo pacman -S dconf-editor gnome-shell gnome-shell-extensions gnome-control-center gnome-tweak-tool file-roller nemo nemo-fileroller p7zip unrar leafpad ttf-liberation lightdm lightdm-gtk-greeter xdg-user-dirs-gtk xdg-utils firefox flashplugin network-manager-applet networkmanager-dispatcher-ntpd ristretto tumbler gtk-engine-murrine dosfstools gnome-keyring polkit-gnome lynx wget
+
+gsettings set org.nemo.desktop show-desktop-icons false
+gsettings set org.gnome.desktop.background show-desktop-icons true
+
+sudo systemctl enable lightdm
+sudo systemctl enable NetworkManager
+sudo systemctl enable ntpd
+sudo updatedb
+
+xdg-user-dirs-update
